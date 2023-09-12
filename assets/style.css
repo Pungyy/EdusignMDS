@@ -61,6 +61,9 @@ footer {
     width: 99.9%;
     background: #FFC107;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer a {
@@ -68,5 +71,5 @@ footer a {
     text-decoration: none;
     font-weight: normal;
     font-size: 20px;
-    
+
 }

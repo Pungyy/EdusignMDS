@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>Edusign - Portail Web</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="assets/img/edusign.png" type="image/x-icon">
     </head>
     <body>
@@ -18,7 +18,8 @@
                 </div>
             </div>
 
-            <div class="mid" onclick="location.href='/templates/intervenant';">
+            
+            <div class="mid">
                 <h1 class="edusign-title">Edusign</h1>
                 <div class="title-mid">
                     <h1>
@@ -27,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="right" onclick="location.href='/templates/apprenant';">
+            <div class="right">
                 <div class="title-right">
                     <h1>
                         Je suis <br> apprenant·e
@@ -52,22 +53,7 @@
         </div>
 
 
-
-
-
-            <?php
-                $servername = 'localhost';
-                $username = 'root';
-                $password = 'root';
-                
-                //On établit la connexion
-                $conn = new mysqli($servername, $username, $password);
-                
-                //On vérifie la connexion
-                if($conn->connect_error){
-                    die('Erreur : ' .$conn->connect_error);
-                }
-                echo 'Connexion réussie';
-            ?>
     </body>
+
+    <script src="assets/js/anim.js"></script>
 </html>

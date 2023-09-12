@@ -6,7 +6,12 @@
         <link rel="stylesheet" href="cours.css">
     </head>
     <body>
-        <h1>Bases de données MySQL</h1>  
+        <h1>Edusign</h1>  
+
+
+
+
+
         <?php
             $servername = 'localhost';
             $username = 'root';

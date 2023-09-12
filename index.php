@@ -10,7 +10,7 @@
 
         <div class="gallery">
 
-            <div class="left" onclick="location.href='school/';">
+            <div class="left">
                 <div class="title-left">
                     <h1>
                         Je suis <br> administrateur·rice
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="mid">
+            <div class="mid" onclick="location.href='/templates/intervenant';">
                 <h1 class="edusign-title">Edusign</h1>
                 <div class="title-mid">
                     <h1>
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="right">
+            <div class="right" onclick="location.href='/templates/apprenant';">
                 <div class="title-right">
                     <h1>
                         Je suis <br> apprenant·e

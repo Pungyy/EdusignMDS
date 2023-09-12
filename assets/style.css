@@ -37,6 +37,7 @@
     background-position: center;
     background-size: cover;
     width: 33.3%;
+    cursor: pointer;
 }
 
 .edusign-title{
@@ -53,6 +54,7 @@
     background-position: center;
     background-size: cover;
     width: 33.3%;
+    cursor: pointer;
 }
 
 footer {

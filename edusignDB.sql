@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   `prenomEtudiant` varchar(50) DEFAULT NULL,
   `dateNaissance` date DEFAULT NULL,
   `mdpEtudiant` varchar(50) DEFAULT NULL,
+  'estPresent'
 
   PRIMARY KEY (`idEtudiant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -16,32 +16,50 @@
         </div>
 
 
-    <div class="slideshow-container">
+        <div class="slideshow-container">
 
-        <div class="mySlides fade" style="display: block;">
-            <img src="../assets/img/tuto1.png" style="width:100%">
+            <div class="mySlides fade" style="display: block;">
+                <h1>Scan It</h1>
+                <br>
+                <p>Pas besoin de feuille de présence utilisez votre téléphone et c'est parti</p>
+                <img src="../assets/img/tuto1.png" style="width:150px;">
+            </div>
+
+            <div class="mySlides fade">
+                <h1>Check It</h1>
+                <br>
+                <p>Votre signature est confirmée quand vous scannez le QR Code</p>
+                <img src="../assets/img/tuto2.png" style="width:150px;">
+            </div>
+
+            <div class="mySlides fade">
+                <h1>Manage</h1>
+                <br>
+                <p>Vous pouvez voir vos absences et votre calendrier sur votre dashboard</p>
+                <img src="../assets/img/tuto3.png" style="width:150px;">
+            </div>
+
         </div>
 
-        <div class="mySlides fade">
-            <img src="../assets/img/tuto2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-            <img src="../assets/img/tuto3.png" style="width:100%">
-        </div>
-
-    </div>
-
-    <br>
+        <br>
     
-    <div style="text-align:center">
+        <div style="text-align:center">
 
-        <span class="dot active" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
 
-    </div>
+        </div>
 
+    <form action="POST">
+        <input type="email" name="email" id="email" placeholder=" Email">
+        <input type="password" name="password" id="password" placeholder=" Mot de passe">
+        <div class="form-btn">
+            <button type="submit">Connexion</button>
+        </div>
+
+        <p>Autres options</p>
+    </form>
 
     </div>
 

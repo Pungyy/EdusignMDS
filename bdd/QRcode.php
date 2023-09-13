@@ -1,5 +1,5 @@
 <?php
-require_once '../modele/bd.inc.php';//lien vers le fichier de connexion de la base de donnée
+require_once '../bdd/bd.inc.php';//lien vers le fichier de connexion de la base de donnée
 include 'phpqrcode/qrlib.php';
 
 // Le contenu du QR code (dans cet exemple, un lien vers un site Web)
@@ -10,7 +10,7 @@ $filename = 'qrcode.png';
 
 //$lienQRcode = '';
 //Génération d'un Id de QRcode aleatoire  
-$newIdQRcode = 'uniqid(): %s\r\n', uniqid();
+$newIdQRcode = printf(uniqid());
 
 
 function modifQRcode(){

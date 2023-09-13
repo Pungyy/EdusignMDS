@@ -11,7 +11,6 @@ if(!isset($_SESSION)){
             $req = $db->prepare("SELECT prenomEtudiant FROM etudiant WHERE mailEtudiant=? AND mdpEtudiant=?;");
             $req->execute([$identifiant,$mdp]);
             $cnt = $req->rowCount();
-            var_dump($cnt);
             if($cnt == 1){
                 $res = $req->fetch();
                 $_SESSION['prenomEtudiant'] = $res['prenomEtudiant'];
@@ -22,7 +21,6 @@ if(!isset($_SESSION)){
    
 
     function isConnect(){
-        var_dump(['session' => $_SESSION['numE']]);
         if(isset($_SESSION['numE'])){
             return true;    
         }else{

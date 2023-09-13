@@ -6,7 +6,6 @@
 
         $identifiant = $_POST['email'];
         $mdp = $_POST['password'];
-        var_dump($identifiant, $mdp);
         connect($identifiant, $mdp);
     }
 

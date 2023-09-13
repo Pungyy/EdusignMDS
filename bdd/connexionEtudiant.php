@@ -1,47 +1,54 @@
 <?php 
+
+if(!isset($_SESSION)){
+    session_start();
+}
     include_once "../bdd/bd.inc.php";
     
-    if(!isset($_SESSION)){
-        session_start();
-    }
+        $mail = "";
+		$mdp = "";
+		$msgerr="";
+        $connexion = $_POST['connexion'];
 
-    $identifiant = $_POST['email'];
-    $mdp = $_POST['password'];
-
-    function connect($identifiant,$mdp){
-        $db = connexionPDO();
-        $req = $db->prepare("SELECT idEtudiant, nomEtudiant, prenomEtudiant, dateNaissance, mail AS id FROM etudiant WHERE identifiant=? AND mdp=?;");
-        $req->execute([$identifiant,$mdp]);
-        $cnt = $req->rowCount();
-        if($cnt == 1){
-            $resultat = $req->fetch();
-            $_SESSION['idEtudiant'] = $resultat['identifiant'];
-            $_SESSION['numE'] = $resultat['id'];
-            $_SESSION['nomEtudiant'] = $resultat['nomEtudiant'];
-            $_SESSION['prenomEtudiant'] = $resultat['prenomEtudiant'];
-            $_SESSION['dateNaissance'] = $resultat['dateNaissance'];
-            $_SESSION['mailEtudiant']=$resultat['mailEtudiant'];
-            $resultat = true;
-            echo 'bonjour';
-        }else {
-            $resultat = false;
+    if(isset($connexion)){
+        $identifiant = $_POST['email'];
+        $mdp = $_POST['password'];
+        function connect($identifiant,$mdp){
+            $db = connexionPDO();
+            $req = $db->prepare("SELECT idEtudiant, nomEtudiant, prenomEtudiant, dateNaissance, mailEtudiant AS id FROM etudiant WHERE idEtudiant=? AND mdpEtudiant=?;");
+            $req->execute([$identifiant,$mdp]);
+            $cnt = $req->rowCount();
+            if($cnt == 1){
+                $resultat = $req->fetch();
+                $_SESSION['numE'] = $res['id'];
+                $resultat = true;
+            }else {
+                $resultat = false;
+            }
         }
     }
+   
 
     function isConnect(){
         if(isset($_SESSION['numE'])){
             return true;    
-            echo 'bonjour';
         }else{
+            echo 'bonsoir non';
             return false;
         }
+    }
+
+    function errorConMsg($msg){
+        return '<p style="color:red"><b>'.$msg.'</b></p>';
+    }
+
+    if(isConnect()){
+    }else{
+        echo ' bonjour';
+        $msgerr = errorConMsg("Une erreur lors de la procédure à été détecté, vérifiez le mail et le mot passe, si vous êtes un adhérent cochez la case prévue a cette effet"); 
     }
 
     function disconnect(){
         session_unset(); 
    }
-
-    function errorConMsg($msg){
-        return '<p style="color:red"><b>'.$msg.'</b></p>';
-    }
 ?>

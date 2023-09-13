@@ -55,12 +55,11 @@
         <input type="email" name="email" id="email" placeholder=" Email">
         <input type="password" name="password" id="password" placeholder=" Mot de passe">
         <div class="form-btn">
-            <button type="submit">Connexion</button>
+            <button type="submit" name="connexion">Connexion</button>
         </div>
 
         <p>Autres options</p>
     </form>
-
     </div>
 
 </body>

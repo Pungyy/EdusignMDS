@@ -2,6 +2,9 @@
 -- Base de données : `edusign`
 --
 
+CREATE DATABASE IF NOT EXISTS edusign;
+
+USE edusign;
 -- --------------------------------------------------------
 
 --

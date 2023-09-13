@@ -13,7 +13,7 @@ if (isConnect() == false) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Protégée</title>
+    <title>Ma page : <?php echo ($_SESSION['prenomEtudiant']); ?></title>
 </head>
 <body>
     <h1>Bienvenue sur la page protégée, <?php echo ($_SESSION['prenomEtudiant']); ?></h1>

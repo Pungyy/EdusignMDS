@@ -18,6 +18,13 @@
 
         <div class="slideshow-container">
 
+        <?php
+        if(isset($msgerr)){
+            echo $msgerr;
+        }
+
+        ?>
+
             <div class="mySlides fade" style="display: block;">
                 <h1>Scan It</h1>
                 <br>

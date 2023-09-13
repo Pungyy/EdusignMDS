@@ -14,7 +14,7 @@ if(!isset($_SESSION)){
             var_dump($cnt);
             if($cnt == 1){
                 $res = $req->fetch();
-                $_SESSION['numE'] = $res['id'];
+                $_SESSION['prenomEtudiant'] = $res['prenomEtudiant'];
             }else{
                 $_SESSION['numE'] = null;
             }
@@ -37,5 +37,5 @@ if(!isset($_SESSION)){
    
    function errorConMsg($msg){
     return '<p style="color:red"><b>'.$msg.'</b></p>';
-}
+    }
 ?>

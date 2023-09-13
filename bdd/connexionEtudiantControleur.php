@@ -11,7 +11,7 @@
     }
 
     if(isConnect()){
-        
+        header('Location: ../templates/logged.php');
     }else{
         $msgerr = errorConMsg("Une erreur lors de la procédure à été détecté, vérifiez le mail et le mot passe"); 
     }

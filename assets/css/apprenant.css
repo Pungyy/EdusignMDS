@@ -104,3 +104,15 @@ button {
     font-weight: bold;
     font-size: 15px;
 }
+
+form p {
+  margin: 0 auto;
+  color: #2980b9;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}

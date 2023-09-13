@@ -28,6 +28,10 @@
                 <input type="password" placeholder="*****">
             </div>
             
+            <div class="forgot">
+                <p>Se souvenir de moi</p>
+                <a href="" class="forgot-password">Mot de passe oublié</a>
+            </div>
         </div>
     </div>
 </body>

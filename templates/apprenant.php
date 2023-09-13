@@ -51,7 +51,7 @@
 
         </div>
 
-    <form method="POST" action="formulaire.php">
+    <form method="POST" action="../bdd/connexionEtudiant.php">
         <input type="email" name="email" id="email" placeholder=" Email">
         <input type="password" name="password" id="password" placeholder=" Mot de passe">
         <div class="form-btn">

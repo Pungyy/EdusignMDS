@@ -16,14 +16,14 @@ CREATE TABLE `etudiant` (
   `mdpEtudiant` varchar(50) DEFAULT NULL,
   `QRcodeLu` tinyint(1) DEFAULT '0',
   `estPresent` varchar(50) NOT NULL DEFAULT 'ABSENT',
-  `mail` varchar(50) DEFAULT NULL
+  `mailEtudiant` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `etudiant`
 --
 
-INSERT INTO `etudiant` (`idEtudiant`, `nomEtudiant`, `prenomEtudiant`, `dateNaissance`, `mdpEtudiant`, `QRcodeLu`, `estPresent`, `mail`) VALUES
+INSERT INTO `etudiant` (`idEtudiant`, `nomEtudiant`, `prenomEtudiant`, `dateNaissance`, `mdpEtudiant`, `QRcodeLu`, `estPresent`, `mailEtudiant`) VALUES
 ('j67', 'Jeannus', 'Jean', '2003-01-01', 'JJ6701', NULL, 'ABSENT', 'jeannus.jean@my-digital-school.org'),
 ('M22', 'Maximus', 'Max', '2018-04-22', 'MM2204', NULL, 'ABSENT', 'Maximus.Max@my-digital-school.org'),
 ('R22', 'Roger', 'Albert', '2022-11-22', 'RA2211', NULL, 'ABSENT', 'Roger.Albert@my-digital-school.org');
@@ -38,7 +38,9 @@ CREATE TABLE `prof` (
   `idProf` varchar(50) NOT NULL,
   `nomProf` varchar(50) DEFAULT NULL,
   `prenomProf` varchar(50) DEFAULT NULL,
-  `dateNaissance` date DEFAULT NULL
+  `dateNaissance` date DEFAULT NULL,
+  `mailProf` varchar(50) DEFAULT NULL
+
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------

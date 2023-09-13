@@ -42,9 +42,19 @@ CREATE TABLE `prof` (
   `nomProf` varchar(50) DEFAULT NULL,
   `prenomProf` varchar(50) DEFAULT NULL,
   `dateNaissance` date DEFAULT NULL,
+  `mdpEtudiant` varchar(50) DEFAULT NULL,
   `mailProf` varchar(50) DEFAULT NULL
 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `prof`
+--
+
+INSERT INTO `prof` (`idProf`, `nomProf`, `prenomProf`, `dateNaissance`, `mdpProf` , `mailProf`) VALUES
+('P3', 'Paul', 'Pierre', '2003-03-03', 'PP0303', 'Paul.Pierre@my-digital-school.org'),
+('P9', 'Pythagorus', 'Pythagore', '1999-09-09', 'PP0909', 'Pythagorus.Pythagore@my-digital--school.org');
+
 
 -- --------------------------------------------------------
 

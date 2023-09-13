@@ -13,20 +13,27 @@
         </div>
     </nav>
 
+    <?php
+        if(isset($msgerr)){
+            echo $msgerr;
+        }
+
+    ?>
+
     <div class="container">
 
-        <form class="form" method="post" action="connexionProf.php">
+        <form class="form" method="post" action="../bdd/connexionProfControleur.php">
 
             <div class="intervenant">
                 <h1>CONNEXION <br> <b>INTERVENANT</b></h1>
             </div>
 
             <div class="inputs">
-                <input type="email" placeholder="ex. darthvader@gmail.com">
+                <input type="email" name="email" placeholder="ex. darthvader@gmail.com">
             </div>
 
             <div class="inputs2">
-                <input type="password" placeholder="*****">
+                <input type="password" name="password" placeholder="*****">
             </div>
             
             <div class="forgot">
@@ -34,7 +41,7 @@
                 <a href="" class="forgot-password">Mot de passe oublié</a>
             </div>
 
-            <button>Connexion</button>
+            <button name="connexion">Connexion</button>
 
         </form>
         

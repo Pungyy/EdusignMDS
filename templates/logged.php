@@ -16,7 +16,7 @@ if (isConnect() == false) {
     <title>Page Protégée</title>
 </head>
 <body>
-    <h1>Bienvenue sur la page protégée, <?php echo ($_SESSION['numE']); ?></h1>
+    <h1>Bienvenue sur la page protégée, <?php echo ($_SESSION['prenomEtudiant']); ?></h1>
     <p>Contenu de la page protégée...</p>
     <a href="deconnexion.php">Se déconnecter</a>
 </body>

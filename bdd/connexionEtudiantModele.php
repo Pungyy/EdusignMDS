@@ -21,7 +21,7 @@ if(!isset($_SESSION)){
    
 
     function isConnect(){
-        if(isset($_SESSION['numE'])){
+        if(isset($_SESSION['prenomEtudiant'])){
             return true;    
         }else{
             return false;

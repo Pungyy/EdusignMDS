@@ -17,7 +17,7 @@
 }
 
 .left {
-    background-image: url(/assets/img/school.jpg);
+    background-image: url("../EdusignMDS/assets/img/school.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -32,7 +32,7 @@
 }
 
 .mid {
-    background-image: url(/assets/img/professor.jpg);
+    background-image: url(../EdusignMDS/assets/img/professor.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -49,7 +49,7 @@
 }
 
 .right {
-    background-image: url(/assets/img/student.jpg);
+    background-image: url(../EdusignMDS/assets/img/student.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

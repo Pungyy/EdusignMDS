@@ -35,7 +35,7 @@ nav {
 }
 
 .form {
-    margin-top: 10vh;
+    margin-top: 25vh;
     max-width: 425px;
     box-shadow: 0 0 10px #0000002e;
     border-radius: 0;
@@ -76,4 +76,19 @@ input {
 .forgot-password{
     color: #1890ff;
     text-decoration: none;
+}
+
+button {
+    background: none;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    background: #FFC107;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
 }

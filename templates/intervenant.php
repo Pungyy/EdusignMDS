@@ -14,7 +14,8 @@
     </nav>
 
     <div class="container">
-        <div class="form">
+
+        <form class="form" method="post" action="connexionProf.php">
 
             <div class="intervenant">
                 <h1>CONNEXION <br> <b>INTERVENANT</b></h1>
@@ -32,7 +33,11 @@
                 <p>Se souvenir de moi</p>
                 <a href="" class="forgot-password">Mot de passe oublié</a>
             </div>
-        </div>
+
+            <button>Connexion</button>
+
+        </form>
+        
     </div>
 </body>
 </html>

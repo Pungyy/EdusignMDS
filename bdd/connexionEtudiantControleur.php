@@ -10,7 +10,7 @@
     }
 
     if(isConnect()){
-        header('Location: ../templates/logged.php');
+        header('Location: ../templates/loggedEtudiant.php');
     }else{
         $msgerr = errorConMsg("Une erreur lors de la procédure à été détecté, vérifiez le mail et le mot passe"); 
     }

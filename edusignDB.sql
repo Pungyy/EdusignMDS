@@ -53,7 +53,7 @@ CREATE TABLE `prof` (
 
 INSERT INTO `prof` (`idProf`, `nomProf`, `prenomProf`, `dateNaissance`, `mdpProf` , `mailProf`) VALUES
 ('P3', 'Paul', 'Pierre', '2003-03-03', 'PP0303', 'Paul.Pierre@my-digital-school.org'),
-('P9', 'Pythagorus', 'Pythagore', '1999-09-09', 'PP0909', 'Pythagorus.Pythagore@my-digital--school.org');
+('P9', 'Pythagorus', 'Pythagore', '1999-09-09', 'PP0909', 'Pythagorus.Pythagore@my-digital-school.org');
 
 
 -- --------------------------------------------------------

@@ -9,9 +9,9 @@ function QRcodeLu($QRcodeLu){
     $req = $db->prepare("SELECT QRcodeLu FROM etudiant WHERE idEtudiant=?;");
     $req->execute([$QRcodeLu, $idEtudiant]);
     if($QRcodeLu == NULL){
-        $resultat = true;
-    }else {
         $resultat = false;
+    }else {
+        $resultat = true;
     }
 }
 

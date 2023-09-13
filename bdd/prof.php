@@ -1,9 +1,9 @@
 <?php
 
-include "../bdd/connexionProf.php";
+include "../bdd/connexionProfControleur.php";
 
 function lesPresent(){
-    if(isConnect()==true){
+    if(isConnect()){
         try{
             $db=connexionPDO();//connexion à la BDD
             $req=$db->prepare("SELECT * from etudiant;");//preparation de la requête préparée pour se prévenir contre les injections sql

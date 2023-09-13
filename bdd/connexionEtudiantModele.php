@@ -15,11 +15,10 @@ if(!isset($_SESSION)){
                 $res = $req->fetch();
                 $_SESSION['prenomEtudiant'] = $res['prenomEtudiant'];
             }else{
-                $_SESSION['numE'] = null;
+                $_SESSION['prenomEtudiant'] = null;
             }
         }
    
-
     function isConnect(){
         if(isset($_SESSION['prenomEtudiant'])){
             return true;    
@@ -32,7 +31,6 @@ if(!isset($_SESSION)){
         session_unset(); 
    }
 
-   
    function errorConMsg($msg){
     return '<p style="color:red"><b>'.$msg.'</b></p>';
     }

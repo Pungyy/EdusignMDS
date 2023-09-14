@@ -3,7 +3,7 @@ require_once '../bdd/bd.inc.php';//lien vers le fichier de connexion de la base 
 include 'phpqrcode/qrlib.php';
 
 // Le contenu du QR code (dans cet exemple, un lien vers un site Web)
-$content = 'https://www.example.com';
+$content = 'test.com';
 
 // Le nom du fichier de sortie (vous pouvez le personnaliser)
 $filename = '../bdd/qrcode.png';

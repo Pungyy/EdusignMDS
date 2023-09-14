@@ -55,7 +55,7 @@ INSERT INTO `etudiant` (`idEtudiant`, `nomEtudiant`, `prenomEtudiant`, `dateNais
 -- --------------------------------------------------------
 
 --
--- Structure de la table `prof`
+-- Structure de la table `prof^^
 --
 
 CREATE TABLE `prof` (

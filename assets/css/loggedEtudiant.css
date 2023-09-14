@@ -73,7 +73,7 @@ nav {
   .modal {
     background-color: #FFC107;
     color: #fff;
-    width: 600px;
+    width: 400px;
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
@@ -89,7 +89,7 @@ nav {
   
     
   .modal button {
-    margin-top: 20px;
+    margin: 20px auto;
     color: #FFC107;
     background-color: #fff;
     padding: 25px;
@@ -99,4 +99,8 @@ nav {
     font-size: 15px;
     cursor: pointer;
     width: 150px;
+  }
+
+  .modal img {
+    margin-top: 20px;
   }

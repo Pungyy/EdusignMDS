@@ -2,7 +2,6 @@
 session_start();
 
 include '../bdd/connexionEtudiantModele.php';
-require '../bdd/QRcode.php';
 
 if (isConnect() == false) {
     header('Location: apprenant.php');
@@ -17,6 +16,7 @@ if (isConnect() == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/loggedEtudiant.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Ma page : <?php echo ($_SESSION['prenomEtudiant']); ?></title>
 </head>
 <body>
@@ -40,12 +40,26 @@ if (isConnect() == false) {
     <div id="modal_container" class="modal-container">
     <div class="modal">
         <h1>QRCode</h1>
-        <?php 
-            echo '<img src="' . $filename . '"alt="QR Code">';
-        ?>
+        <img src="../bdd/QRcode.php"alt="QR Code">
         <button id="close">Fermer</button>
     </div>
     </div>
+    
+
+    <script>
+        // Fonction pour charger le QR code
+        function loadQRCode() {
+            setTimeout(function(){
+            '../bdd/QRcode.php'.reload();
+            }, 5000);
+        }
+
+        // Charger le QR code au chargement de la page
+        loadQRCode();
+
+        // Recharger le QR code toutes les 30 secondes
+        setInterval(loadQRCode, 3000);
+    </script>
 
 </body>
 

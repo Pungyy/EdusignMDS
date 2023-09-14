@@ -1,16 +1,15 @@
 <?php
-    include 'phpqrcode/qrlib.php';
+include 'phpqrcode/qrlib.php';
 
-    // Le contenu du QR code (dans cet exemple, un lien vers un site Web)
-    $content = 'https://www.example.com';
+// Générez un nom de fichier unique pour le QR code
+$filename = '../assets/img/qrcode/qrcode_' . uniqid() . '.png';
 
-    // Le nom du fichier de sortie (vous pouvez le personnaliser)
-    $filename = '../assets/img/qrcode/qrcode.png';
+// Le contenu du QR code (dans cet exemple, un lien vers un site Web)
+$content = 'https://www.example.com';
 
-    // Générez le QR code
-    QRcode::png($content, $filename);
+// Générez le QR code
+QRcode::png($content, $filename);
 
-    // Affichez le QR code généré
-    echo '<img src="' . $filename . '" alt="QR Code">';
-
+// Affichez le nom du fichier généré
+echo $filename;
 ?>

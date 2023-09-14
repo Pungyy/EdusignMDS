@@ -41,36 +41,36 @@ if (isConnect() == false) {
     <div id="modal_container" class="modal-container">
     <div class="modal">
         <h1>QRCode</h1>
-        <div id="qrcode-container">
-          
-        </div>
-       
+        <div id="qrcode-container"></div>
         <button id="close">Fermer</button>
     </div>
     </div>
     
 
     <script>
-        // Fonction pour charger le QR code
-        function loadQRCode() {
-            $.ajax({
-                url: '../bdd/QRGenerator.php', // L'URL de votre fichier PHP de génération de QR code
-                method: 'GET',
-                success: function(data) {
-                    // Afficher le QR code dans l'élément 'qrcode-container'
-                    $('#qrcode-container').html('<img src="'+ data +'" alt="QR Code" />');
-                },
-                error: function() {
-                    console.log('Erreur lors du chargement du QR code.');
-                }
-            });
-        }
+        // // Fonction pour charger le QR code
+        // function loadQRCode() {
+        //     $.ajax({
+        //         url: '../bdd/QRGenerator.php', // L'URL de votre fichier PHP de génération de QR code
+        //         method: 'GET',
+        //         success: function(data) {
+        //               // Créer une balise <img> pour afficher l'image QR code
+        //               var imgElement = $('<img>').attr('src', data).attr('alt', 'QR Code');
+                    
+        //             // Afficher l'image dans l'élément 'qrcode-container'
+        //             $('#qrcode-container').html(imgElement);
+        //         },
+        //         error: function() {
+        //             console.log('Erreur lors du chargement du QR code.');
+        //         }
+        //     });
+        // }
 
-        // Charger le QR code au chargement de la page
-        loadQRCode();
+        // // Charger le QR code au chargement de la page
+        // loadQRCode();
 
-        // Recharger le QR code toutes les 30 secondes
-        setInterval(loadQRCode, 3000);
+        // // Recharger le QR code toutes les 30 secondes
+        // setInterval(loadQRCode, 3000);
     </script>
 
 </body>

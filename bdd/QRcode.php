@@ -10,5 +10,4 @@ $filename = '../assets/img/qrcode/qrcode_' . uniqid() . '.png';
 
 // Générer le QR code
 QRcode::png($link, $filename);
-echo $filename; // Renvoyer le nom du fichier généré
 ?>

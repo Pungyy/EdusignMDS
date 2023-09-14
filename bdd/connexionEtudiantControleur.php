@@ -1,6 +1,6 @@
 <?php
 
-    include_once '../bdd/connexionEtudiantModele.php';
+include_once '../bdd/connexionEtudiantModele.php';
 
    if(isset($_POST['connexion'])){
 

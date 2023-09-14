@@ -5,7 +5,7 @@
     $content = 'https://www.example.com';
 
     // Le nom du fichier de sortie (vous pouvez le personnaliser)
-    $filename = 'qrcode.png';
+    $filename = '../bdd/qrcode.png';
 
     // Générez le QR code
     QRcode::png($content, $filename);

@@ -6,11 +6,11 @@ include 'phpqrcode/qrlib.php';
 $content = 'https://www.example.com';
 
 // Le nom du fichier de sortie (vous pouvez le personnaliser)
-$filename = 'qrcode.png';
+$filename = '../bdd/qrcode.png';
 
 //$lienQRcode = '';
 //Génération d'un Id de QRcode aleatoire  
-$newIdQRcode = printf(uniqid());
+$newIdQRcode = uniqid();
 
 
 function modifQRcode(){
@@ -24,14 +24,4 @@ function modifQRcode(){
     }
 }
 
-while(true){
-    //timer fixé à 30 sec
-    $timer = new EvTimer(30, 0, function () {
-    // Générez le QR code
-    QRcode::png($content, $filename);
-    // Affichez le QR code généré
-    echo '<img src="' . $filename . '" alt="QR Code">';
-    modifQRcode();
-    });    
-}
 ?>

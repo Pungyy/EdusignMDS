@@ -2,6 +2,7 @@
 session_start();
 
 include '../bdd/connexionEtudiantModele.php';
+require '../bdd/QRcode.php';
 
 if (isConnect() == false) {
     header('Location: apprenant.php');
@@ -39,7 +40,9 @@ if (isConnect() == false) {
     <div id="modal_container" class="modal-container">
     <div class="modal">
         <h1>QRCode</h1>
-
+        <?php 
+            echo '<img src="' . $filename . '"alt="QR Code">';
+        ?>
         <button id="close">Fermer</button>
     </div>
     </div>

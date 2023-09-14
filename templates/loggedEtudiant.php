@@ -29,9 +29,22 @@ if (isConnect() == false) {
         </div>
     </nav>
     
+    <div class="title">
+        <h1>Bienvenue <?php echo ($_SESSION['prenomEtudiant']); ?></h1>
+        <h2>Tu souhaites signer ton prochain cours ? C'est par ici :</h2>
+        <button id="open">Voir mon QRCode</button>
+    </div>
 
-    <h1>Bienvenue <?php echo ($_SESSION['prenomEtudiant']); ?></h1>
-    <h2>Tu souhaites signer ton prochain cours ? C'est par ici :</h2>
+
+    <div id="modal_container" class="modal-container">
+    <div class="modal">
+        <h1>QRCode</h1>
+
+        <button id="close">Fermer</button>
+    </div>
+    </div>
 
 </body>
+
+<script src="../assets/js/loggedEtudiant.js"></script>
 </html>

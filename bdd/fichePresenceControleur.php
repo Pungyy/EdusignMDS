@@ -1,5 +1,5 @@
 <?php
     include_once '../bdd/fichePresenceModele.php';
-    $etudiants = getStudents();
+    $donnees = getStudents();
     include_once '../templates/fichePresence.php'; //affichage de la vue 
 ?>

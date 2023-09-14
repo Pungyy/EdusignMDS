@@ -3,15 +3,14 @@
 
     function getStudents(){
         $resultat=array();
-        try{
+        $donnees = [];
         $db=connexionPDO();//connexion à la BDD
         $req=$db->prepare('SELECT nomEtudiant, prenomEtudiant, dateNaissance, estPresent FROM etudiant ;');
         $req->execute([]);
-        $resultat = $req->fetchall(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            print "Erreur !: " . $e->getMessage();
-            die();
+        while ($ligne = $req->fetch()) {
+            $donnees[] = $ligne;
         }
+        return $donnees;
     }
     getStudents();//exécution de la requête
 ?>

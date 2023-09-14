@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/apprenant.css">
-    
+    <?php include_once '../bdd/fichePresenceControleur.php';?>
 
     <title>Présences</title>
 </head>
@@ -18,22 +18,16 @@
                 <th>Présence</th>
             </tr>
         </thead>
-        <?php 
-        include_once '../bdd/fichePresenceControleur.php';
-        if(empty($etudiants)){
-            echo'</table><p> Le tableau est vide. <p> ';
-        }else {
-        ?>
-            <tbody>
-            <?php foreach((array)$etudiants as $row):?>
+        <tbody>
+            <?php foreach ($donnees as $ligne) : ?>
             <tr>
-                <td><?php echo $row['nomEtudiant'];?></td>
-                <td><?php echo $row['prenomEtudiant'];?></td>
-                <td><?php echo $row['dateNaissance'];?></td>
-                <td><?php echo $row['estPresent'];?></td>
+                <td><?= $ligne['nomEtudiant'] ?></td>
+                <td><?= $ligne['prenomEtudiant'] ?></td>
+                <td><?= $ligne['dateNaissance'] ?></td>
+                <td><?= $ligne['estPresent'] ?></td>
             </tr>
-                <?php endforeach; } ?>
-            </tbody>
+            <?php endforeach; ?>
+        </tbody>
     </table>
 </body>
 <script src="../assets/js/apprenant.js"></script>

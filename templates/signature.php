@@ -3,10 +3,10 @@ session_start();
 
 include '../bdd/connexionEtudiantModele.php';
 
-if (isConnect() == false) {
-    header('Location: apprenant.php');
-    exit();
-}
+// if (isConnect() == false) {
+//     header('Location: apprenant.php');
+//     exit();
+// }
         
 ?>
 

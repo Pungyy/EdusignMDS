@@ -18,7 +18,7 @@ $numberOfQRCodes = 10;
 // Générez et enregistrez les codes QR
 for ($i = 1; $i <= $numberOfQRCodes; $i++) {
 
-    $lien = 'http://edusignmds.test:88/templates/signature.php';
+    $lien = 'https://d7vnlc19-80.uks1.devtunnels.ms/edusignmds/templates/signature.php?';
     $id = uniqid(); // Utilisation d'un identifiant unique (timestamp)
     $validite = 1;
     createDatas($id, $lien, $validite);

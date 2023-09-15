@@ -12,7 +12,7 @@
     if(isConnect()){
         header('Location: ../templates/loggedProf.php');
     }else{
-        $msgerr = errorConMsg("Une erreur lors de la procédure à été détecté, vérifiez le mail et le mot passe"); 
+        $msgerr = errorConMsg("Grand garçon ou grande fille que tu es, tu sais pas taper ton mot de passe ? Tu veux du poison c'est ça ?"); 
     }
 
     include_once '../templates/intervenant.php';

@@ -13,7 +13,7 @@ if (!file_exists($destinationFolder)) {
 }
 
 // Nombre total de codes QR à générer
-$numberOfQRCodes = 2;
+$numberOfQRCodes = 10;
 
 // Générez et enregistrez les codes QR
 for ($i = 1; $i <= $numberOfQRCodes; $i++) {

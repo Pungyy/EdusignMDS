@@ -2,6 +2,7 @@
 session_start();
 
 include '../bdd/connexionEtudiantModele.php';
+include_once '../bdd/QRcodeModele.php';
 
 if (isConnect() == false) {
     header('Location: apprenant.php');

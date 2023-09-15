@@ -8,27 +8,33 @@
     $id = generateRandomId();
     $lien = 'http://edusignmds.test:88/templates/signature.php';
     $newId =generateRandomId(); 
+    $validite = "1";
 
-    function createDatas($id, $lien){
+    function createDatas($id, $lien, $validite){
         try {
             $db = connexionPDO(); //connexion à la BDD
-            $req = $db->prepare('INSERT INTO qrcode VALUES (?, ?)');//preparation de la requête préparée pour se prévenir contre les injections sql
-            $req->execute([$id, $lien]);//exécution de la requête avec les variables souhaitées 
+            $req = $db->prepare('INSERT INTO qrcode (idQRcode, lienQRcode, validiteQRcode) VALUES (?, ?, ?)');//preparation de la requête préparée pour se prévenir contre les injections sql
+            $req->execute([$id, $lien, $validite]);//exécution de la requête avec les variables souhaitées 
             $resultat = array("success" => true);
         } catch (PDOException $e) {
             $resultat = array("success" => false, "error" => $e->getMessage());
         }  
     }
 
-    function updateDatas($newId, $lien){
-        try{
-            $db=connexionPDO();//connexion à la BDD
-            $req=$db->prepare("UPDATE qrcode SET idQRcode = ? WHERE lienQRcode =?;");//preparation de la requête préparée pour se prévenir contre les injections sql
-            $req->execute([$newId, $lien]);//exécution de la requête avec les variables souhaitées 
-            $resultat = $req->fetch(PDO::FETCH_ASSOC);
+    function updateDatas($newId) {
+        try {
+            $db = connexionPDO(); // Connexion à la BDD
+    
+            // Désactiver tous les QR codes actuellement actifs en mettant validite à 0
+            $disableAllQR = $db->prepare("UPDATE qrcode SET validiteQRcode = 0 WHERE validiteQRcode = ?");
+            $disableAllQR->execute([]);
+    
+            // Activer le nouveau QR code en mettant validite à 1
+            $enableNewQR = $db->prepare("UPDATE qrcode SET validiteQRcode = 1 WHERE idQRcode = ?");
+            $enableNewQR->execute([$newId]);
             $resultat = array("success" => true);
-       } catch (PDOException $e) {
-           $resultat = array("success" => false, "error" => $e->getMessage());
-       }
+        } catch (PDOException $e) {
+            $resultat = array("success" => false, "error" => $e->getMessage());
+        }    
     }
 ?>

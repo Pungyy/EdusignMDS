@@ -13,15 +13,15 @@ if (!file_exists($destinationFolder)) {
 }
 
 // Nombre total de codes QR à générer
-$numberOfQRCodes = 10;
+$numberOfQRCodes = 2;
 
 // Générez et enregistrez les codes QR
 for ($i = 1; $i <= $numberOfQRCodes; $i++) {
 
     $lien = 'http://edusignmds.test:88/templates/signature.php';
-
     $id = uniqid(); // Utilisation d'un identifiant unique (timestamp)
-    $newId =generateRandomId(); 
+    $validite = 1;
+    createDatas($id, $lien, $validite);
 
 
     // Nom de fichier pour le code QR
@@ -33,13 +33,13 @@ for ($i = 1; $i <= $numberOfQRCodes; $i++) {
     // Générer le code QR
     QRcode::png($lien . $id, $filePath);
 
+    // Enregistrer l'ID du nouveau QR code
+    $newId = generateRandomId();
+
+    // Appel de la fonction updateDatas pour désactiver tous les anciens et activer le nouveau QR code
+    updateDatas($newId);
+
     // Afficher le chemin du fichier généré
     echo "QR Code #$i généré : $filePath<br>";
-
-    if(!isset($data)){
-        $data = createDatas($id, $lien);
-    }else{
-        $data = updateDatas($newId, $lien);
-    }
 }
 ?>

@@ -49,7 +49,7 @@ if (isConnect() == false) {
 
     <script>
 
-        const numberOfImages = 10;
+        const numberOfImages = 2;
 
         const imageSources = [];
 

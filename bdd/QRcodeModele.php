@@ -6,7 +6,7 @@
     }
     
     $id = generateRandomId();
-    $lien = 'signature.php'; 
+    $lien = 'http://edusignmds.test:88/templates/signature.php';
     $newId =generateRandomId(); 
 
     function createDatas($id, $lien){

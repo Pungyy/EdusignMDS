@@ -28,8 +28,8 @@ if (isConnect() == false) {
     <div class="signature">
         <h1>Re <?php echo ($_SESSION['prenomEtudiant']); ?> ! Si tu ne veux pas être marqué absent, signe moi ça</h1>
         <div class="flex-row">
-            <div class="wrapper">
-                <canvas id="signature-pad" width="200" height="100"></canvas>
+            <div class="wrapper" name="signature">
+                <canvas id="signature-pad" width="600" height="400"></canvas>
             </div>
             <div class="clear-btn">
                 <button id="clear"><span> Effacer </span></button>
@@ -38,7 +38,7 @@ if (isConnect() == false) {
 
         <form method="POST">
             <div class="send-btn">
-                <button id="send"><span> Envoyer </span></button>
+                <button id="send" name="envoieSignature"><span> Envoyer </span></button>
             </div>
         </form>
 

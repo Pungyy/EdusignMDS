@@ -2,6 +2,7 @@
 
 include "../bdd/connexionEtudiantControleur.php";
 
+
 $estPresent = "PRÉSENT";
 
 function QRcodeLu($QRcodeLu){

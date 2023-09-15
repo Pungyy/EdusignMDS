@@ -40,25 +40,39 @@ if (isConnect() == false) {
     <div id="modal_container" class="modal-container">
     <div class="modal">
         <h1>QRCode</h1>
-        <img src="../bdd/QRcode.php"alt="QR Code">
+        <img src="../bdd/QRcode.php" alt="QR Code" id="qrCode">
         <button id="close">Fermer</button>
     </div>
     </div>
     
 
     <script>
-        // Fonction pour charger le QR code
-        function loadQRCode() {
-            setTimeout(function(){
-            '../bdd/QRcode.php'.reload();
-            }, 5000);
+
+        const numberOfImages = 840;
+
+        const imageSources = [];
+
+        const basePath = '../assets/img/qrcodes/';
+
+        for (let i = 1; i <= numberOfImages; i++) {
+            const imageFileName = `qrcode_${i}.png`;
+            const imagePath = basePath + imageFileName;
+            imageSources.push(imagePath);
         }
 
-        // Charger le QR code au chargement de la page
-        loadQRCode();
+        function changeRandomImage() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            const randomImageSource = imageSources[randomIndex];
+            image.src = randomImageSource;
+            image.alt = 'Random Image';
+        }
 
-        // Recharger le QR code toutes les 30 secondes
-        setInterval(loadQRCode, 3000);
+        const image = document.getElementById('qrCode');
+
+        changeRandomImage();
+
+        setInterval(changeRandomImage, 3000); 
+
     </script>
 
 </body>

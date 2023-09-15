@@ -17,6 +17,7 @@
     </nav>
 
     <div class="tableau">
+        <h1 style="color: black; margin-bottom: 50px;">Tableau des présences</h1>
         <table>
             <thead>
                 <tr>
@@ -42,17 +43,16 @@
 
 <script>
 
-    var isAbsent = document.getElementById("absent");
-    const array = [isAbsent];
+    var isAbsentElements = document.querySelectorAll("#absent");
 
-    array.forEach(element => {
-        if (isAbsent = "ABSENT"){
-        document.getElementById("absent").style.color = "red";
-        }
-        else {
-            document.getElementById("absent").style.color = "green";
+    isAbsentElements.forEach(element => {
+        if (element.textContent.trim() === "ABSENT") {
+            element.style.color = "red";
+        } else {
+            element.style.color = "green";
         }
     });
+
        
 </script>  
 

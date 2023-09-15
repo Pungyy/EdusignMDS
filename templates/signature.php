@@ -36,9 +36,11 @@ if (isConnect() == false) {
             </div>
         </div>
 
-        <div class="send-btn">
-            <button id="send"><span> Envoyer </span></button>
-        </div>
+        <form method="POST">
+            <div class="send-btn">
+                <button id="send"><span> Envoyer </span></button>
+            </div>
+        </form>
 
     </div>
 
